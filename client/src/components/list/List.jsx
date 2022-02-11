@@ -2,6 +2,9 @@ import "./list.scss"
 import { ArrowBackIosOutlined, ArrowForwardIosOutlined } from "@material-ui/icons"
 import Listitem from "../listitem/Listitem"
 import { useRef, useState } from "react"
+
+
+
 export default function List({ list }) {
     const [isMoved, setIsMoved] = useState(false)
     const [slideNumber, setSlideNumber] = useState(0)
@@ -30,8 +33,6 @@ export default function List({ list }) {
                     {list.content.map((item,i) => (
                         <Listitem index={i} item={item} />
                     ))}
-
-
                 </div>
                 <ArrowForwardIosOutlined className="sliderArrow right" onClick={() => handelClick("right")} />
             </div>

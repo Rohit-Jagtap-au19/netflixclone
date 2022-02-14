@@ -32,7 +32,7 @@ export default function List({ list }) {
                 <div className="container" ref={listRef}>
                     {list.content.map((item,i) => (
                         <Listitem index={i} item={item} />
-                    ))}
+                        ))}
                 </div>
                 <ArrowForwardIosOutlined className="sliderArrow right" onClick={() => handelClick("right")} />
             </div>
